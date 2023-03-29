@@ -12,14 +12,14 @@ $mp3 = new mp3editor();
 ```
 
 ## Methods
-### `tags(***string*** $path)`
+### `tags(string $path)`
 get mp3 file tags as a clean array
 ```php
 $mp3 = new mp3editor();
 $tags = $mp3->tags('/my/file.mp3');
 ```
 
-### `cover(***string*** $path,***string|false*** $saveto = false)`
+### `cover(string $path,string|false $saveto = false)`
 get content of music cover file . you can also with using `$saveto` parameter use a path to save cover content into a image file
 ```php
 $mp3 = new mp3editor();
@@ -33,7 +33,7 @@ file_put_contents("/a/path/file.png",file_get_contents($cover);
 $cover = $mp3->cover('/my/file.mp3','/cover/path/file.jpg');
 ```
 
-### `tagEdit(***string*** $path,***array*** $data)`
+### `tagEdit(string $path,array $data)`
 replace any tags into a mp3 file very simple
 ```php
 $mp3 = new mp3editor();
@@ -45,7 +45,7 @@ $new_tags = [
 $mp3->tagEdit('/my/file.mp3',$new_tags);
 ```
 
-### `trim(***string*** $path,***int*** $offset,***int*** $limit,***string|false*** $saveto = false)`
+### `trim(string $path,int $offset,int $limit,string|false $saveto = false)`
 trim a mp3 file and save it as overwrite or into another path
 if dont use `$saveto` parameter it means you want trim and overwrite mp3 file
 ```php
