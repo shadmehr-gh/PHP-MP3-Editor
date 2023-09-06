@@ -3,8 +3,8 @@ class mp3editor
 {
     function __construct()
     {
-        require_once "id3/getid3/getid3.php";
-        require_once 'id3/getid3/write.php';
+        require_once "getid3/getid3.php";
+        require_once 'getid3/write.php';
         require_once "phpmp3/phpmp3.php";
     }
     function tags(string $path)
